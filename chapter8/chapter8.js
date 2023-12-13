@@ -353,43 +353,44 @@
 // console.log(d.toLocaleDateString());
 
 //chapter projects
-//employee tracking app
-// class Employee {
-//     constructor(first, last, years) {
-//         this.first = first;
-//         this.last = last;
-//         this.years = years;
-//     }
-// }
-// const person1 = new Employee("Laurence", "Svekis", 10);
-// const person2 = new Employee("Jane", "Doe", 5);
-// const workers = [person1, person2];
-// Employee.prototype.details = function () {
-//     return this.first + " " + this.last + " has worked here " +
-//         this.years + " years";
-// }
-// workers.forEach((person) => {
-//     console.log(person.details());
-// });
+// let str = "JavaScript";
 
-// //menu items price calculator
-// class Menu {
-//     #offer1 = 10;
-//     #offer2 = 20;
-//     constructor(val1, val2) {
-//         this.val1 = val1;
-//         this.val2 = val2;
+// function scramble(val) {
+//     let max = val.length;
+//     let temp = "";
+//     for (let i = 0; i < max; i++) {
+//         console.log(val.length);
+//         let index = Math.floor(Math.random() * val.length);
+//         temp += val[index];
+//         console.log(temp);
+//         val = val.substr(0, index) + val.substr(index + 1);
+//         console.log(val);
 //     }
-//     calTotal() {
-//         return (this.val1 * this.#offer1) + (this.val2 * this.#offer2);
-//     }
-//     get total() {
-//         return this.calTotal();
-//     }
+//     return temp;
 // }
-// const val1 = new Menu(2, 0);
-// const val2 = new Menu(1, 3);
-// const val3 = new Menu(3, 2);
-// console.log(val1.total);
-// console.log(val2.total);
-// console.log(val3.total);
+// console.log(scramble(str));
+
+// const endDate = "Sept 1 2022";
+// function countdown() {
+//     const total = Date.parse(endDate) - new Date();
+//     const days = Math.floor(total / (1000 * 60 * 60 * 24));
+//     const hrs = Math.floor((total / (1000 * 60 * 60)) % 24);
+//     const mins = Math.floor((total / 1000 / 60) % 60);
+//     const secs = Math.floor((total / 1000) % 60);
+//     return {
+//         days,
+//         hrs,
+//         mins,
+//         secs
+//     };
+// }
+// function update() {
+//     const temp = countdown();
+//     let output = "";
+//     for (const property in temp) {
+//         output += (`${property}: ${temp[property]} `);
+//     }
+//     console.log(output);
+//     setTimeout(update, 1000);
+// }
+// update();
